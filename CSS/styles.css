@@ -1,0 +1,103 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: pink;
+  font-family: Arial, sans-serif;
+  overflow: hidden;
+}
+
+/* baris gambar */
+.row {
+  display: flex;
+  width: max-content;
+  position: absolute;
+  left: 0;
+}
+
+.row img {
+  width: 100px;
+  height: 100px;
+  margin: 5px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+/* posisi atas & bawah */
+#row-top {
+  top: 10%;
+}
+#row-bottom {
+  bottom: 10%;
+}
+
+/* card di tengah */
+.center-card {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  width: 300px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  z-index: 1;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 10px;
+  background: #ff69b4;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.btn:hover {
+  background: #ff85c1;
+}
+
+.ucapan-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* tetap tengah */
+  align-items: flex-start;
+  gap: 80px; /* buat jarak antar card lebih lega */
+  padding: 80px 10px; /* lebih top-bottom lega dan kiri-kanan agak ke dalam */
+  max-width: 1200px; /* biar container nggak terlalu melebar */
+  margin: 0 auto; /* otomatis ke tengah */
+}
+
+/* card ucapan */
+.card {
+  position: relative; /* supaya hanging-img bisa absolute */
+  background: white;
+  padding: 40px 20px 20px 20px; /* tambah padding top biar muat gantungan */
+  border-radius: 12px;
+  text-align: center;
+  min-width: 150px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* hover card */
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* gambar gantung per card */
+.hanging-img {
+  position: absolute;
+  top: -50px; /* posisinya di atas card */
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.hanging-img img {
+  width: 70px;
+  height: auto;
+}
